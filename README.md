@@ -5,18 +5,15 @@ Python script for automatically reducing size of all JPEG and PNG images in a di
 
 Usage: `compressimages.py [-h] [--mode {compress,restorebackup,deletebackup}] path`
 
-Reduce file size of PNG and JPEG images.
-
-positional arguments:
+Positional arguments:  
   `path`                File or directory name
 
-optional arguments:
-  `-h, --help`          show this help message and exit
-  `--mode {compress,restorebackup,deletebackup}`
-                        Mode to run with (default: compress)
-                        `compress`: Compress the image(s).
-                        `restorebackup`: Restore the backup images (valid for directory path only).
-                        `deletebackup`: Delete the backup images (valid for directory path only).
+Optional arguments:  
+  `-h, --help`          show this help message and exit  
+  `--mode {compress,restorebackup,deletebackup}` Mode to run with (default: compress)  
+  * `compress`: Compress the image(s).  
+  * `restorebackup`: Restore the backup images (valid for directory path only).  
+  * `deletebackup`: Delete the backup images (valid for directory path only).  
 
 Python 2.7 or later is required.
 
