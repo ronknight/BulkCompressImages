@@ -17,4 +17,4 @@ Optional arguments:
 
 Python 2.7 or later is required.
 
-See [Using Python to Reduce JPEG and PNG Image File Sizes Without Loss of Quality (Softwariness.com)](https://www.softwariness.com/musings/reduce-image-file-sizes-using-python/) for more information.
+See [Using Python to Reduce JPEG and PNG Image File Sizes Without Loss of Quality (Softwariness.com)](https://www.softwariness.com/articles/reduce-image-file-sizes-using-python/) for more information.
