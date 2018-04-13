@@ -84,14 +84,14 @@ class CompressImage(ProcessBase):
         try:
             # Skip read-only files
             if (not stat(filename)[0] & S_IWRITE):
-                print 'Ignoring read-only file "' + filename + '".'
+                print ('Ignoring read-only file "' + filename + '".')
                 return False
             
             # Create a backup
             backupname = filename + '.' + self.backupextension
 
             if isfile(backupname):
-                print 'Ignoring file "' + filename + '" for which existing backup file is present.'
+                print ('Ignoring file "' + filename + '" for which existing backup file is present.')
                 return False
 
             rename(filename, backupname)
@@ -109,7 +109,7 @@ class CompressImage(ProcessBase):
                 # Check that it's a supported format
                 format = str(img.format)
                 if format != 'PNG' and format != 'JPEG':
-                    print 'Ignoring file "' + filename + '" with unsupported format ' + format
+                    print ('Ignoring file "' + filename + '" with unsupported format ' + format)
                     return False
 
                 # This line avoids problems that can arise saving larger JPEG files with PIL
@@ -123,7 +123,7 @@ class CompressImage(ProcessBase):
             newsize = getsize(filename)
 
             if newsize >= origsize:
-                print 'Cannot further compress "' + filename + '".'
+                print ('Cannot further compress "' + filename + '".')
                 return False
 
             # Successful compression
@@ -206,7 +206,7 @@ if __name__ == "__main__":
         processor.processfile(args.path)
     elif isdir(args.path):
         filecount = processor.processdir(args.path)
-        print '\nSuccessfully updated file count: ' + str(filecount)
+        print ('\nSuccessfully updated file count: ' + str(filecount))
     else:
         stderr.write('Invalid path "' + args.path + '"\n')
         exit(1)
