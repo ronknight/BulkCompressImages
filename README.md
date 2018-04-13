@@ -13,7 +13,24 @@ Optional arguments:
   `--mode {compress,restorebackup,deletebackup}` Mode to run with (default: compress)  
   * `compress`: Compress the image(s).  
   * `restorebackup`: Restore the backup images (valid for directory path only).  
-  * `deletebackup`: Delete the backup images (valid for directory path only).  
+  * `deletebackup`: Delete the backup images (valid for directory path only).
+  
+      Example 1: Compress Images on SampleFolder 
+      compressimages.py --mode compress SampleFolder
+
+
+      Example 2: Restore backup images on SampleFolder 
+      compressimages.py --mode restorebackup SampleFolder
+
+
+      Example 3: Compress Images on SampleFolder 
+      compressimages.py --mode deletebackup SampleFolder
+
+Issues that may occur:
+
+  ModuleNotFoundError: No module named 'PIL'
+  Fix: Please ensure that you installed image using pip
+
 
 Python 2.7 or later is required.
 
